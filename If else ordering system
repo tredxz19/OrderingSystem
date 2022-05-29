@@ -1,0 +1,120 @@
+using System;
+using System.Linq;
+
+namespace Ordering_System
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+
+int burger = 50;
+int fries = 30;
+int footlong = 70;
+int drinks =20;
+string space = "                  ";
+string notice = "";
+string peso = ".00 pesos";
+
+Console.WriteLine("                Matos Fast Food");
+Console.WriteLine(space);
+Console.WriteLine(space + "Burger (50)");
+Console.WriteLine(space + "Fries (30)");
+Console.WriteLine(space + "Footlong (70)");
+Console.WriteLine(space + "Drinks (20)");
+Console.WriteLine(notice);
+Console.Write("What is your order:");
+
+try
+{
+string order = Convert.ToString(Console.ReadLine());
+
+if (order == "burger")
+{
+Console.Write("How many burger do you want?:");
+
+int orderburger = Convert.ToInt32(Console.ReadLine());
+int totalburgerorder = (burger * orderburger);
+Console.WriteLine("The total amount of your order is"+" "+totalburgerorder+peso);
+Console.Write("How much the cash will you pay:");
+int burgercash = Convert.ToInt32(Console.ReadLine());
+int payment = ((burgercash)-(totalburgerorder));
+if ((totalburgerorder) < (burgercash))
+{
+Console.WriteLine("Your exchange is"+" "+payment+peso);
+}
+else 
+{
+	Console.WriteLine("Sorry you dont have enough money");
+}
+}
+else if(order == "fries")
+{
+Console.Write("How many fries do you want?:");
+
+int orderfries = Convert.ToInt32(Console.ReadLine());
+int totalfriesorder = (fries * orderfries);
+Console.WriteLine("The total amount of your order is"+" "+totalfriesorder+peso);
+Console.Write("How much the cash will you pay:");
+int friescash = Convert.ToInt32(Console.ReadLine());
+int payment = ((friescash)-(totalfriesorder));
+if ((totalfriesorder) < (friescash))
+{
+Console.WriteLine("Your exchange is"+" "+payment+peso);
+}
+else 
+{
+	Console.WriteLine("Sorry you dont have enough money");
+}
+}
+else if(order == "footlong")
+{
+Console.Write("How many footlong do you want?:");
+
+int orderfootlong = Convert.ToInt32(Console.ReadLine());
+int totalfootlongorder = (footlong * orderfootlong);
+Console.WriteLine("The total amount of your order is"+" "+totalfootlongorder+peso);
+Console.Write("How much the cash will you pay:");
+int footlongcash = Convert.ToInt32(Console.ReadLine());
+int payment = ((footlongcash)-(totalfootlongorder));
+if ((totalfootlongorder) < (footlongcash))
+{
+Console.WriteLine("Your exchange is"+" "+payment+peso);
+}
+else 
+{
+	Console.WriteLine("Sorry you dont have enough money");
+}
+}
+else if(order == "drinks")
+{
+Console.Write("How many drinks do you want?:");
+
+int orderdrinks = Convert.ToInt32(Console.ReadLine());
+int totaldrinksorder = (drinks * orderdrinks);
+Console.WriteLine("The total amount of your order is"+" "+totaldrinksorder+peso);
+Console.Write("How much the cash will you pay:");
+int drinkscash = Convert.ToInt32(Console.ReadLine());
+int payment = ((drinkscash)-(totaldrinksorder));
+if ((totaldrinksorder) < (drinkscash))
+{
+Console.WriteLine("Your exchange is"+" "+payment+peso);
+}
+else 
+{
+	Console.WriteLine("Sorry you dont have enough money");
+}
+}
+else
+{
+Console.WriteLine("Invalid Order");
+}
+}
+catch
+{
+	Console.WriteLine("invalid order");
+}
+
+		}
+	}
+}
